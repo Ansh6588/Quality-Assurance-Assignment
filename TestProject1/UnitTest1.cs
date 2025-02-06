@@ -10,6 +10,7 @@ namespace TestProject1
         {
             _product = new Product(50, "Samsung galaxy S24 ultra", 2000, 5000);
         }
+        /*Test 1-6 added by Ansh GirishKumar Patel*/
 
         [Test]
         public void IncreaseStock_Should_Increase_StockAmount()
@@ -83,6 +84,62 @@ namespace TestProject1
 
             // Assert
             Assert.That(itemPrice, Is.EqualTo(5)); // item Price should accept maximum value - 5
+        }
+
+
+
+        /*Test 7-12 added by Gursimar Kaur*/
+
+        [Test]
+        public void Constructor_ShouldThrowException_WithInvalidProdId()
+        {
+            // Arrange, Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() => new Product(1, "Invalid", 100.0m, 50));
+            Assert.That(ex.Message, Is.EqualTo("Product ID must be between 5 and 50000."));
+        }
+
+
+        [Test]
+        public void IncreaseStock_ShouldIncreaseStock_WhenAmountIsPositive()
+        {
+            // Arrange
+            var product = new Product(100, "Chair", 1200m, 50);
+
+            // Act
+            product.IncreaseStock(90);
+
+            // Assert
+            Assert.That(product.StockAmount, Is.EqualTo(140));
+        }
+
+        [Test]
+        public void DecreaseStock_ShouldReduceStock_ByExactAmount()
+        {
+            var product = new Product(400, "Table", 250m, 250);
+            product.DecreaseStock(28);
+            Assert.That(product.StockAmount, Is.EqualTo(222));
+        }
+
+        [Test]
+        public void ProductName_ShouldAllowAlphanumeric()
+        {
+            var product = new Product(200, "Chair2", 100m, 50);
+            Assert.That(product.ProdName, Is.EqualTo("Chair2"));
+        }
+
+        [Test]
+        public void ProductId_ShouldAcceptMinimumValue()
+        {
+            var product = new Product(5, "LowID", 100m, 50);
+            Assert.That(product.ProdId, Is.EqualTo(5));
+        }
+
+        [Test]
+        public void StockAmount_ShouldRemainUnchanged_WhenIncreaseByZero()
+        {
+            var product = new Product(500, "Table", 300m, 200);
+            product.IncreaseStock(0);
+            Assert.That(product.StockAmount, Is.EqualTo(200));
         }
 
     }
