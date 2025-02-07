@@ -1,24 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\",
+  "WorkspaceRootPath": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0135DF4-33DA-47D9-A636-4C27F307C436}|..\\TestProject1\\TestProject1.csproj|c:\\users\\yashp\\onedrive\\desktop\\desktop1\\conestoga\\sem 4\\software quality\\assign2\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0135DF4-33DA-47D9-A636-4C27F307C436}|..\\TestProject1\\TestProject1.csproj|c:\\users\\patid\\quality-assurance-assignment\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\yashp\\onedrive\\desktop\\desktop1\\conestoga\\sem 4\\software quality\\assign2\\assignment2\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\patid\\quality-assurance-assignment\\assignment2\\assignment2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|solutionrelative:assignment2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\patid\\quality-assurance-assignment\\assignment2\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\yashp\\onedrive\\desktop\\desktop1\\conestoga\\sem 4\\software quality\\assign2\\assignment2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\patid\\quality-assurance-assignment\\assignment2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0135DF4-33DA-47D9-A636-4C27F307C436}|..\\TestProject1\\TestProject1.csproj|c:\\users\\yashp\\onedrive\\desktop\\desktop1\\conestoga\\sem 4\\software quality\\assign2\\testproject1\\testproject1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|c:\\users\\yashp\\onedrive\\desktop\\desktop1\\conestoga\\sem 4\\software quality\\assign2\\assignment2\\assignment2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FBD831DE-4A46-470D-87A3-5B1C28226969}|Assignment2.csproj|solutionrelative:assignment2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\TestProject1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,15 +28,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Assignment2",
-              "DocumentMoniker": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Assignment2.csproj",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\patid\\Quality-Assurance-Assignment\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\patid\\Quality-Assurance-Assignment\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowPUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T14:25:10.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Assignment2.csproj",
+              "DocumentMoniker": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Assignment2.csproj",
               "RelativeDocumentMoniker": "Assignment2.csproj",
-              "ToolTip": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Assignment2.csproj",
+              "ToolTip": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Assignment2.csproj",
               "RelativeToolTip": "Assignment2.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -45,55 +58,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TestProject1",
+              "DocumentIndex": 4,
+              "Title": "TestProject1.csproj",
               "DocumentMoniker": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\TestProject1.csproj",
-              "RelativeDocumentMoniker": "..\\TestProject1\\TestProject1.csproj",
+              "RelativeDocumentMoniker": "..\\..\\..\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\TestProject1.csproj",
               "ToolTip": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\TestProject1.csproj",
-              "RelativeToolTip": "..\\TestProject1\\TestProject1.csproj",
+              "RelativeToolTip": "..\\..\\..\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\TestProject1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-05T02:42:23.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\TestProject1\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\TestProject1\\UnitTest1.cs",
-              "RelativeToolTip": "..\\TestProject1\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T02:42:12.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Product.cs",
-              "RelativeDocumentMoniker": "Product.cs",
-              "ToolTip": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Product.cs",
-              "RelativeToolTip": "Product.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T02:41:58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-05T02:42:23.387Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Product.cs",
+              "RelativeDocumentMoniker": "Product.cs",
+              "ToolTip": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Product.cs",
+              "RelativeToolTip": "Product.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T02:41:58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\yashp\\OneDrive\\Desktop\\Desktop1\\conestoga\\Sem 4\\Software Quality\\Assign2\\Assignment2\\Program.cs",
+              "ToolTip": "C:\\Users\\patid\\Quality-Assurance-Assignment\\Assignment2\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T02:41:08.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-05T02:41:08.108Z"
             }
           ]
         }

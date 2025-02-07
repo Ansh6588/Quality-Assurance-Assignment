@@ -319,7 +319,10 @@
       "System.Reflection.Metadata/1.6.0": {},
       "Assignment2/1.0.0": {
         "runtime": {
-          "Assignment2.dll": {}
+          "Assignment2.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
