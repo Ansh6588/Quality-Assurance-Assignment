@@ -67,7 +67,7 @@ namespace TestProject1
             _product = new Product(110, "Fridge", 5000, 255);
 
             // Act
-            decimal itemPrice = _product.ItemPrice; 
+            decimal itemPrice = _product.ItemPrice;
 
             // Assert
             Assert.That(itemPrice, Is.EqualTo(5000)); // item Price should accept maximum value - 5000
@@ -88,37 +88,56 @@ namespace TestProject1
 
 
 
-        /*Test 7-12 added by Gursimar Kaur*/
+        //Test 7-12 added by Gursimar Kaur
 
         [Test]
-        public void Constructor_ShouldThrowException_WithInvalidProdId()
-        {
-            // Arrange, Act & Assert
-            var ex = Assert.Throws<ArgumentException>(() => new Product(1, "Invalid", 100.0m, 50));
-            Assert.That(ex.Message, Is.EqualTo("Product ID must be between 5 and 50000."));
-        }
-
-
-        [Test]
-        public void IncreaseStock_ShouldIncreaseStock_WhenAmountIsPositive()
+        public void IncreaseStock_ShouldNotChangeStock_WhenNegativeValueProvided()
         {
             // Arrange
-            var product = new Product(100, "Chair", 1200m, 50);
+            var product = new Product(150, "Laptop", 1500, 10);
+            int initialStock = product.StockAmount;
 
             // Act
-            product.IncreaseStock(90);
+            product.IncreaseStock(-10);
 
             // Assert
-            Assert.That(product.StockAmount, Is.EqualTo(140));
+            Assert.That(product.StockAmount, Is.EqualTo(initialStock), "Stock should remain unchanged when given a negative value.");
         }
 
+
+
+
+
         [Test]
-        public void DecreaseStock_ShouldReduceStock_ByExactAmount()
+        public void IncreaseStock_ShouldNotExceedMaxAllowedStock()
         {
-            var product = new Product(400, "Table", 250m, 250);
-            product.DecreaseStock(28);
-            Assert.That(product.StockAmount, Is.EqualTo(222));
+            // Arrange
+            var maxAllowedStock = 50000; // Define a max stock limit
+            var product = new Product(400, "Smart TV", 3000, 44000);
+            int stockToIncrease = 6000; // Trying to increase stock beyond max allowed
+
+            // Act
+            product.IncreaseStock(stockToIncrease);
+
+            // Assert
+            Assert.That(product.StockAmount, Is.EqualTo(maxAllowedStock)); // Stock should not exceed max allowed value
         }
+
+
+        [Test]
+        public void DecreaseStock_ShouldNotThrowException_WhenStockAmountIsGreaterThanCurrentStock()
+        {
+            // Arrange
+            var product = new Product(300, "Monitor", 500, 50);
+            int stockToDecrease = 60; // Trying to decrease more than available stock
+
+            // Act
+            product.DecreaseStock(stockToDecrease);
+
+            // Assert
+            Assert.That(product.StockAmount, Is.EqualTo(5)); // Stock should not go below the minimum value of 5
+        }
+
 
         [Test]
         public void ProductName_ShouldAllowAlphanumeric()
@@ -128,19 +147,99 @@ namespace TestProject1
         }
 
         [Test]
-        public void ProductId_ShouldAcceptMinimumValue()
+        public void Constructor_ShouldThrowException_WhenNegativeStockProvided()
         {
-            var product = new Product(5, "LowID", 100m, 50);
-            Assert.That(product.ProdId, Is.EqualTo(5));
+            // Arrange
+            int negativeStock = -5;
+
+            // Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() => new Product(200, "Headphones", 1500, negativeStock));
+            Assert.That(ex.Message, Is.EqualTo("Stock amount must be between 5 and 500000."));
         }
 
         [Test]
-        public void StockAmount_ShouldRemainUnchanged_WhenIncreaseByZero()
+        public void ProductId_ShouldAcceptValidRangeValues()
         {
-            var product = new Product(500, "Table", 300m, 200);
-            product.IncreaseStock(0);
-            Assert.That(product.StockAmount, Is.EqualTo(200));
+            // Arrange
+            var validProductId = 1000;
+            var product = new Product(validProductId, "Smartphone", 500, 100);
+
+            // Act & Assert
+            Assert.That(product.ProdId, Is.EqualTo(validProductId)); // Product ID should be accepted
         }
 
+        //Test 13-18 added by Gajendra
+
+        [Test]
+        public void ProdName_ShouldTrimWhitespace()
+        {
+            // Arrange
+            var product = new Product(150, "  Laptop  ", 1500, 10);
+
+            // Act
+            var trimmedName = product.ProdName.Trim(); // Ensuring any whitespace is removed
+
+            // Assert
+            Assert.That(trimmedName, Is.EqualTo("Laptop"));
+        }
+
+
+
+
+        [Test]
+        public void DecreaseStock_ShouldNotThrowException_WhenStockGoesBelowZero()
+        {
+            // Arrange
+            var product = new Product(300, "Monitor", 500, 50);
+            int stockToDecrease = 60; // Trying to decrease more than available stock
+
+            // Act
+            product.DecreaseStock(stockToDecrease);
+
+            // Assert
+            Assert.That(product.StockAmount, Is.EqualTo(5)); // Stock should be set to the minimum value of 5
+        }
+
+
+        [Test]
+        public void ProductId_ShouldThrowException_WhenAboveMaxLimit()
+        {
+            // Act & Assert
+            Assert.That(() => new Product(50001, "Smartwatch", 200, 15), Throws.ArgumentException
+                .With.Message.EqualTo("Product ID must be between 5 and 50000."));
+        }
+
+        [Test]
+        public void ItemPrice_ShouldAllowTwoDecimalPrecision()
+        {
+            // Arrange
+            var product = new Product(250, "Keyboard", 199.99m, 50);
+
+            // Act & Assert
+            Assert.That(product.ItemPrice, Is.EqualTo(199.99m));
+        }
+
+        [Test]
+        public void Constructor_ShouldThrowException_WhenNegativePriceProvided()
+        {
+            // Act & Assert
+            Assert.That(() => new Product(100, "Headphones", -50, 20), Throws.ArgumentException
+                .With.Message.EqualTo("Item price must be between $5 and $5000."));
+        }
+
+        [Test]
+        public void ItemPrice_ShouldThrowException_WhenExceedsMaxLimit()
+        {
+            // Arrange
+            decimal maxPrice = 5000m;
+            decimal exceededPrice = 5001m; // Price exceeds max limit
+
+            // Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() => new Product(1001, "Laptop", exceededPrice, 50));
+            Assert.That(ex.Message, Is.EqualTo("Item price must be between $5 and $5000."));
+        }
     }
+
+
+
 }
